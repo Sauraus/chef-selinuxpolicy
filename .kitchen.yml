@@ -29,10 +29,5 @@ suites:
   - name: default
     run_list:
       - recipe[selinux::default]
-      - recipe[selinux_policy_test::default]
-    attributes:
-  - name: semodule
-    run_list:
-      - recipe[selinux::default]
+      - recipe[selinux_policy_test::port]
       - recipe[selinux_policy_test::semodule]
-    attributes:
